@@ -1,0 +1,464 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Radio Canada Big", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* Navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1.5px solid #513c28;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.7);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/*Hero section*/
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 4rem;
+
+  display: flex;
+  align-items: center;
+}
+
+main .content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-height: 80vh;
+  margin-top: 2rem;
+}
+
+main .content .hero {
+  flex: 1 1;
+}
+
+main .content .hero h1 {
+  margin-block: 1rem;
+  font-size: 3.5rem;
+  text-shadow: 1px 1px 3px rgba(150, 145, 145, 0.904);
+  line-height: 1.2;
+}
+
+main .content .hero p {
+  font-size: 1.4rem;
+  line-height: 1.7rem;
+}
+
+main .content .hero span {
+  color: var(--primary);
+}
+
+main .content .content-image {
+  flex: 1;
+  display: flex;
+}
+
+main .content .content-image img {
+  width: 300px;
+  min-width: 250px;
+  margin: auto;
+}
+
+main .content .hero a {
+  padding: 1rem 3rem;
+  border: 3px solid transparent;
+  display: inline-block;
+  border-radius: 999px;
+  margin-top: 1rem;
+  background-color: var(--primary);
+  font-family: "Radio Canada Big", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+main .content .hero a:hover {
+  border: 3px solid var(--primary);
+  background-color: transparent;
+}
+
+/* About section*/
+.content2,
+.content3,
+.kontak {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.content2 .about h2,
+.content3 .member h2,
+.kontak .contacts h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  padding: 8rem 0 1.5rem;
+}
+
+.content2 .about h2 span,
+.kontak .contacts h2 span {
+  color: var(--primary);
+}
+
+.about .row,
+.member .row1 {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 80rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+  border-radius: 5%;
+}
+
+.about .row .text,
+.member .row1 .text1 {
+  flex: 1 1 45rem;
+  padding: 0 1rem;
+}
+
+.about .row .text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .text p,
+.member .row1 .text1 p {
+  margin-bottom: 1.4rem;
+  font-weight: 100;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.about .row .text h3 span {
+  color: var(--primary);
+}
+
+.about .row .text p span {
+  color: var(--primary);
+}
+
+/* Member section*/
+.content3 .member h2,
+.kontak .contacts h2 {
+  margin-bottom: 0rem;
+  text-align: center;
+}
+
+.content3 .member p,
+.kontak .contacts p {
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.2rem;
+  padding: 0 20rem 0;
+  line-height: 1.5rem;
+}
+
+.row1 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.2rem;
+  margin: auto;
+}
+
+.row1 .menu-card {
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.row1 .menu-card img {
+  width: 70%;
+  border-radius: 50%;
+}
+
+.row1 .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+}
+
+.row2 {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.row2 .menu-card1 {
+  text-align: center;
+}
+
+.row2 .menu-card1 img {
+  border-radius: 50%;
+  width: 60%;
+}
+
+.row2 .menu-card1 .menu-card-title1 {
+  margin: 1rem auto 1rem;
+}
+
+/* Contact*/
+.rows {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+  margin: 0 10rem 2rem;
+}
+
+.rows .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+.rows form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.rows form .input-grup {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.rows form .input-grup input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  background: none;
+  color: #fff;
+}
+
+.rows form .btn {
+  margin-top: 3rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.7rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+/*Footer*/
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 2.5rem;
+  margin-top: 3rem;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 0.5rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 0.4rem;
+}
+
+footer .credit {
+  font-size: 1rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
+
+/*Media Queries*/
+
+/*Laptop*/
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+/*Tablet*/
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 70%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  main {
+    padding: 1rem 0rem;
+  }
+  main .content {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  main .content .content-image {
+    order: -1;
+    padding: 4rem 0 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .content2 .about .row .about-img img {
+    margin: 0 1.5rem 0;
+  }
+
+  .content2 .about .row .text p {
+    text-align: justify;
+    margin: 0 1rem 0 0;
+  }
+
+  .about .row .about-img img {
+    width: 39.5rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  main .content3 .member p {
+    flex-direction: column;
+    margin: auto;
+    padding: 0 1rem 0;
+  }
+
+  main .kontak .contacts p {
+    flex-direction: column;
+    margin: auto;
+    padding: 0 1rem 0;
+  }
+
+  .rows {
+    flex-wrap: wrap;
+    margin: 0 1.8rem 0;
+  }
+
+  .rows .map {
+    height: 32rem;
+  }
+}
