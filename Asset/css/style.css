@@ -435,8 +435,15 @@ footer .credit a {
     margin: 0 1rem 0 0;
   }
 
+  .about .row .about-img {
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 2.5rem 0;
+  }
+
   .about .row .about-img img {
-    width: 39.5rem;
+    width: 26rem;
+    align-items: center;
     object-fit: cover;
     object-position: center;
   }
